@@ -1,5 +1,7 @@
 from tkinter import *
-import platform
+import platform 
+from tkinter import ttk
+from tkinter import filedialog
 
 class Systemcall:
     def init(calls, os):
@@ -56,13 +58,19 @@ def createNew():
         name.pack()
         ent = Entry(userinput)
         ent.pack()
-        search = Button(userinput,text="Search applications",command = doNothing)
+        returnb = Button(userinput,text="okay",command=doNothing)
+        returnb.pack()
+        search = Button(userinput,text="Search applications",command = fileDialog)
         search.pack()
+
+    # file browswer 
+    def fileDialog():
+        filename = filedialog.askopenfilename(initialdir="/", title="Select a file",filetype = (("jpeg","*.jpeg"),("All Files","*.*")))
     def openmappings():
         add = Button(op,text = "add application",command = adder)
         add.pack(side=RIGHT)
         options =[
-            "Mapping 1",
+            name,
             "Mapping 2",
             "Mapping 3"
             ]
@@ -102,4 +110,6 @@ B.pack()
 
 
 win.mainloop()
+
+
 
