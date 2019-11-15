@@ -65,7 +65,7 @@ camera = cv2.VideoCapture(0)
 camera.set(10,200)
 cv2.namedWindow('trackbar')
 cv2.createTrackbar('trh1', 'trackbar', threshold, 100, printThreshold)
-
+cap_num = 0
 
 while camera.isOpened():
     ret, frame = camera.read()
@@ -81,8 +81,8 @@ while camera.isOpened():
     #  Main operation
     if isBgCaptured == 1:  # this part wont run until background captured
         img = removeBG(frame)
-        img = img[0:int(cap_region_y_end * frame.shape[0]),
-                    int(cap_region_x_begin * frame.shape[1]):frame.shape[1]]  # clip the ROI
+        img = img[0:int(500),
+                    int(frame.shape[1] - 500):frame.shape[1]]  # clip the ROI
         #cv2.imshow('mask', img)
 
         # convert the image into binary image
@@ -91,7 +91,11 @@ while camera.isOpened():
         #cv2.imshow('blur', blur)
         ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY)
         cv2.imshow('ori', thresh)
-
+        if cap_num < 400:
+            filename = "data/images/1/one_finger" + str(cap_num) + ".png"
+            cv2.imwrite(filename, thresh)
+            print("Captured", filename)
+            cap_num += 1
         
         # get the coutours
         thresh1 = copy.deepcopy(thresh)
@@ -121,6 +125,7 @@ while camera.isOpened():
 
         cv2.imshow('output', drawing)
 
+    import time
     # Keyboard OP
     k = cv2.waitKey(10)
     if k == 27:  # press ESC to exit
@@ -130,6 +135,7 @@ while camera.isOpened():
     elif k == ord('b'):  # press 'b' to capture the background
         bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
         isBgCaptured = 1
+        time.sleep(5)
         print( '!!!Background Captured!!!')
     elif k == ord('r'):  # press 'r' to reset the background
         bgModel = None
