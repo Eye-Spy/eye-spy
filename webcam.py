@@ -74,8 +74,8 @@ while camera.isOpened():
     frame = cv2.flip(frame, 1)  # flip the frame horizontally
     #cv2.rectangle(frame, (int(cap_region_x_begin * frame.shape[1]), 0),
     #             (frame.shape[1], int(cap_region_y_end * frame.shape[0])), (255, 0, 0), 2)
-    cv2.rectangle(frame, (int(frame.shape[1] - 300), 0),
-                 (frame.shape[1], 300), (255, 0, 0), 2)
+    cv2.rectangle(frame, (int(frame.shape[1] - 500), 0),
+                 (frame.shape[1], 500), (255, 0, 0), 2)
     cv2.imshow('original', frame)
 
     #  Main operation
