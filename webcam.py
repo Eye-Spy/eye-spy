@@ -10,8 +10,8 @@ import math
 # opencv: 2.4.13
 
 # parameters
-cap_region_x_begin=0.5  # start point/total width
-cap_region_y_end=0.8  # start point/total width
+cap_region_x_begin=0.25  # start point/total width
+cap_region_y_end=0.4  # start point/total width
 threshold = 60  #  BINARY threshold
 blurValue = 41  # GaussianBlur parameter
 bgSubThreshold = 50
@@ -72,8 +72,10 @@ while camera.isOpened():
     threshold = cv2.getTrackbarPos('trh1', 'trackbar')
     frame = cv2.bilateralFilter(frame, 5, 50, 100)  # smoothing filter
     frame = cv2.flip(frame, 1)  # flip the frame horizontally
-    cv2.rectangle(frame, (int(cap_region_x_begin * frame.shape[1]), 0),
-                 (frame.shape[1], int(cap_region_y_end * frame.shape[0])), (255, 0, 0), 2)
+    #cv2.rectangle(frame, (int(cap_region_x_begin * frame.shape[1]), 0),
+    #             (frame.shape[1], int(cap_region_y_end * frame.shape[0])), (255, 0, 0), 2)
+    cv2.rectangle(frame, (int(frame.shape[1] - 300), 0),
+                 (frame.shape[1], 300), (255, 0, 0), 2)
     cv2.imshow('original', frame)
 
     #  Main operation
