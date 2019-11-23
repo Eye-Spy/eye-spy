@@ -86,34 +86,30 @@ class WebcamHandler(Thread):
 
         time.sleep(1)
         self.bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
+        self.isBackgroundCaptured = 1
+        self.system_ready = True
+        print("Background Captured")
+        time.sleep(1)
 
     def run(self):
         
         webcam = cv2.VideoCapture(0)
         webcam.set(10, 200)
-        self.capture_background()
-        print("Background Captured!")
-        self.isBackgroundCaptured = 1
-        self.system_ready = True
+        self.start_time = time.time()
 
         while webcam.isOpened():
             
-            """
             k = cv2.waitKey(10)
-            if k == ord('b'):
-                bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
-                self.isBackgroundCaptured = 1
-                time.sleep(5)
-                print("background captures")
-            """
+            if (not self.system_ready) and (time.time() - self.start_time >= 3):
+                self.capture_background()
             
-            ret, frame, = webcam.read()
+            ret, frame = webcam.read()
 
             frame = cv2.bilateralFilter(frame, 5, 50, 100)  # smoothing filter
             frame = cv2.flip(frame, 1)  # flip the frame horizontally
             cv2.rectangle(frame, (int(frame.shape[1] - 500), 0),
                         (frame.shape[1], 500), (255, 0, 0), 2)
-            cv2.imshow('original', frame)
+            #cv2.imshow('original', frame)
             if self.isBackgroundCaptured == 1:
                 img = self.remove_background(frame, self.bgModel)
                 img = img[0:int(500), int(frame.shape[1] - 500):frame.shape[1]]
