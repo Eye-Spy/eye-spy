@@ -37,11 +37,13 @@ class_dict = {
 
 class WebcamHandler(Thread):
 
-    def __init__(self):
+    def __init__(self, show_box = False):
         print("Works")
         self.model = self.build_gesture_model()
         self.isBackgroundCaptured = 0
         self.current_gesture = 0
+        self.show_box = show_box
+        self.system_ready = False
 
         Thread.__init__(self)
     
@@ -80,19 +82,30 @@ class WebcamHandler(Thread):
         res = cv2.bitwise_and(frame, frame, mask=fgmask)
         return res
 
+    def capture_background(self):
+
+        time.sleep(1)
+        self.bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
+
     def run(self):
         
         webcam = cv2.VideoCapture(0)
         webcam.set(10, 200)
-        
-        while webcam.isOpened():
+        self.capture_background()
+        print("Background Captured!")
+        self.isBackgroundCaptured = 1
+        self.system_ready = True
 
+        while webcam.isOpened():
+            
+            """
             k = cv2.waitKey(10)
             if k == ord('b'):
                 bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
                 self.isBackgroundCaptured = 1
                 time.sleep(5)
                 print("background captures")
+            """
             
             ret, frame, = webcam.read()
 
@@ -102,7 +115,7 @@ class WebcamHandler(Thread):
                         (frame.shape[1], 500), (255, 0, 0), 2)
             cv2.imshow('original', frame)
             if self.isBackgroundCaptured == 1:
-                img = self.remove_background(frame, bgModel)
+                img = self.remove_background(frame, self.bgModel)
                 img = img[0:int(500), int(frame.shape[1] - 500):frame.shape[1]]
                 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                 blur = cv2.GaussianBlur(gray, (blurValue, blurValue), 0)
