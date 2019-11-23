@@ -1,3 +1,6 @@
+import time
+import numpy as np
+
 from threading import Thread
 
 import tensorflow.keras as keras
@@ -11,13 +14,37 @@ from tensorflow.keras.losses import categorical_crossentropy
 
 import cv2
 
+# Parameters
+threshold = 60
+blurValue = 41
+bgSubThreshold = 50
+learningRate = 0
+
+
+class_dict = {
+    0 : "noise",
+    1 : "one_finger",
+    2 : "two_fingers",
+    3 : "three_fingers",
+    4 : "four_fingers",
+    5 : "five_fingers",
+    6 : "fist",
+    7 : "thumbs_up",
+    8 : "thumbs_down",
+    9 : "okay",
+    10: "c_hand"
+}
+
 class WebcamHandler(Thread):
 
     def __init__(self):
         print("Works")
         self.model = self.build_gesture_model()
+        self.isBackgroundCaptured = 0
+        self.current_gesture = 0
 
         Thread.__init__(self)
+    
 
     def build_gesture_model(self):
         
@@ -43,9 +70,58 @@ class WebcamHandler(Thread):
         
         model.load_weights('GestureModel.h5')
 
-    def run(self):
+        return model
+    
+    def remove_background(self, frame, bgModel):
 
-        while (True):
-            webcam = cv2.VideoCapture(0)
+        fgmask = bgModel.apply(frame, learningRate=learningRate)
+        kernel = np.ones((3, 3), np.uint8)
+        fgmask = cv2.erode(fgmask, kernel, iterations=1)
+        res = cv2.bitwise_and(frame, frame, mask=fgmask)
+        return res
+
+    def run(self):
+        
+        webcam = cv2.VideoCapture(0)
+        webcam.set(10, 200)
+        
+        while webcam.isOpened():
+
+            k = cv2.waitKey(10)
+            if k == ord('b'):
+                bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
+                self.isBackgroundCaptured = 1
+                time.sleep(5)
+                print("background captures")
+            
+            ret, frame, = webcam.read()
+
+            frame = cv2.bilateralFilter(frame, 5, 50, 100)  # smoothing filter
+            frame = cv2.flip(frame, 1)  # flip the frame horizontally
+            cv2.rectangle(frame, (int(frame.shape[1] - 500), 0),
+                        (frame.shape[1], 500), (255, 0, 0), 2)
+            cv2.imshow('original', frame)
+            if self.isBackgroundCaptured == 1:
+                img = self.remove_background(frame, bgModel)
+                img = img[0:int(500), int(frame.shape[1] - 500):frame.shape[1]]
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                blur = cv2.GaussianBlur(gray, (blurValue, blurValue), 0)
+                #cv2.imshow('blur', blur)
+                ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY)
+
+                cv2.imshow("New", thresh)
+                thresh = cv2.resize(thresh, (125, 125))
+                thresh = np.array([thresh.astype('float32')])
+                thresh /= 255
+                # print(thresh)
+                thresh = thresh.reshape((1, 125, 125, 1))
+
+                print(class_dict[np.argmax(self.model.predict(thresh))])
+
+                
+
+
+    
+
 test = WebcamHandler()
 test.start()
