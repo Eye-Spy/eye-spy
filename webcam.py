@@ -92,7 +92,7 @@ while camera.isOpened():
         ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY)
         cv2.imshow('ori', thresh)
         if cap_num < 1000:
-            filename = "data/images/1/one_finger" + str(cap_num) + ".png"
+            filename = "data/images/4/four_fingers" + str(cap_num) + ".png"
             cv2.imwrite(filename, thresh)
             print("Captured", filename)
             cap_num += 1
