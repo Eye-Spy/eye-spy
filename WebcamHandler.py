@@ -20,6 +20,8 @@ blurValue = 41
 bgSubThreshold = 50
 learningRate = 0
 
+CONFIDENCE_REQ = 20
+
 
 class_dict = {
     0 : "noise",
@@ -44,6 +46,11 @@ class WebcamHandler(Thread):
         self.current_gesture = 0
         self.show_box = show_box
         self.system_ready = False
+
+        # Represnts the length at which the current gesture has been in
+        # front of the screen and what that gesture has been
+        self.imm_conf = 0
+        self.last_read = 0
 
         Thread.__init__(self)
     
@@ -90,6 +97,14 @@ class WebcamHandler(Thread):
         self.system_ready = True
         print("Background Captured")
         time.sleep(1)
+    
+    def reset_detection(self):
+        """
+        Utility for forgetting currently selected gesture
+        """
+
+        self.imm_conf = 0
+        self.last_read = 0
 
     def run(self):
         
@@ -125,12 +140,21 @@ class WebcamHandler(Thread):
                 # print(thresh)
                 thresh = thresh.reshape((1, 125, 125, 1))
 
-                print(class_dict[np.argmax(self.model.predict(thresh))])
+                cur = np.argmax(self.model.predict(thresh))
 
-                
+                if cur != self.last_read or cur == 0:
+                    self.imm_conf = 0
+                    self.last_read = cur
+                else:
+                    self.imm_conf += 1
 
+                    # If the length at which the current gesture has been read is sufficient
+                    # we set it has the currently detected gesture 
+                    if self.imm_conf / CONFIDENCE_REQ >= 1:
+                        self.current_gesture = cur
+                        print("Detected", class_dict[self.current_gesture], "!")
 
-    
-
-test = WebcamHandler()
-test.start()
+# For testing purposes 
+if __name__ == "__main__":
+    test = WebcamHandler()
+    test.start()
