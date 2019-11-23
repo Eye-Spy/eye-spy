@@ -86,6 +86,12 @@ class WebcamHandler(Thread):
         self.imm_conf = 0
         self.last_read = 0
 
+    def get_gesture(self):
+        return self.current_gesture()
+    
+    def is_ready(self):
+        return self.system_ready
+
     def run(self):
         
         webcam = cv2.VideoCapture(0)
