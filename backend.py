@@ -1,13 +1,19 @@
 #import WebcamHandler
 import UserProfile
+import gui
+import subprocess
 
-#Get the gesutre
-#gesture = WebcamHandler.webcam.get_gesture()
+# Get the profile
+# This is just a place holder for now until
+# the actual function is written to obtain
+# the profile from the gui
 
+#def get_Profile() :
+    #profile = gui.get_profile()
 
 def gesture_switch(gesture_input):
         switcher = {
-            0: "nothing",
+            0: "noise",
             1: "one_finger",
             2: "two_finger",
             3: "three_finger",
@@ -19,53 +25,19 @@ def gesture_switch(gesture_input):
             9: "okay",
             10: "c_hand"
         }
-        return switcher.get(gesture_input, "Wrong Answer laddy")
+        return switcher.get(gesture_input, "noise")
 
-
-def profile1():
-    get_mapping(1, gesture_switch(gesture) )
-    return "profile1"
-
-def profile2():
-    get_mapping(2, gesture_switch(gesture) )
-    return "profile2"
-
-def profile3():
-    get_mapping(3, gesture_switch(gesture) )
-    return "profile3"
-
-def profile4():
-    get_mapping(4, gesture_switch(gesture) )
-    return "profile4"
-
-def profile5():
-    get_mapping(5, gesture_switch(gesture) )
-    return "profile5"
-
-def profile6():
-    get_mapping(6, gesture_switch(gesture) )
-    return "profile6"
-
-def profile7():
-    get_mapping(7, gesture_switch(gesture) )
-    return "profile7"
-
-def profile8():
-    get_mapping(8, gesture_switch(gesture) )
-    return "profile8"
-
-def profile9():
-    get_mapping(9, gesture_switch(gesture) )
-    return "profile9"
-
-def profile10():
-    get_mapping(10, gesture_switch(gesture) )
-    return "profile10"
+# Get the gesutre and act on it
+def action_On_Gesture() :
+    while webcam.is_read() == True  :
+        gesture = WebcamHandler.webcam.get_gesture()
+        applicationMapping = get_mapping(profile, gesture_switch(gesture) )
+        subprocess.run(applicationMapping)
 
 
 # Driver program 
-if __name__ == "__main__": 
-	argument=2
-	test = gesture_switch(argument)
+# if __name__ == "__main__": 
+# 	argument=2
+# 	test = gesture_switch(argument)
 
-print(test)
+# print(test)
