@@ -34,7 +34,7 @@ def profile10():
 
 
 
-#Get the Gesture
+#Get the gesutre
 
 WebcamHandler.webcam.get_gesture()
 
