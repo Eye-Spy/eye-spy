@@ -1,0 +1,1235 @@
+{
+    "user_profiles":
+    [
+        {
+            "profile_id" : "1",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "2",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "3",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "4",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "5",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "6",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "7",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "8",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "9",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "profile_id" : "10",
+            "gestures" :
+            [
+                {
+                    "gesture_id" : "1",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "2",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "3",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "4",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "5",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "6",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "7",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "8",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "gesture_id" : "9",
+                    "mappings" :
+                    [
+                        {
+                            "mapping_id" : "1",
+                            "applications":
+                            [
+                                "None"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
