@@ -1,6 +1,4 @@
-sample = 2
-
-def gesture_switch(sample):
+edef gesture_switch(sample):
         switcher = {
             1: "test",
             2: "basic",
@@ -11,7 +9,7 @@ def gesture_switch(sample):
 
 # Driver program 
 if __name__ == "__main__": 
-	argument=0
+	argument=2
 	test = gesture_switch(argument) 
     
 print(test)
