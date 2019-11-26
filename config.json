@@ -1,1233 +1,452 @@
 {
-    "user_profiles":
-    [
+    "user_profiles": [
         {
-            "profile_id" : "1",
-            "gestures" :
-            [
+            "profile_id": "1",
+            "gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "2",
-            "gestures" :
-            [
+            "profile_id": "2",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "3",
-            "gestures" :
-            [
+            "profile_id": "3",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "4",
-            "gestures" :
-            [
+            "profile_id": "4",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "5",
-            "gestures" :
-            [
+            "profile_id": "5",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "6",
-            "gestures" :
-            [
+            "profile_id": "6",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "7",
-            "gestures" :
-            [
+            "profile_id": "7",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "8",
-            "gestures" :
-            [
+            "profile_id": "8",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "9",
-            "gestures" :
-            [
+            "profile_id": "9",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         },
         {
-            "profile_id" : "10",
-            "gestures" :
-            [
+            "profile_id": "10",
+			"gestures": [
                 {
-                    "gesture_id" : "1",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "one_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "2",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "two_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "3",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "three_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "4",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "four_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "5",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "five_finger",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "6",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "fist",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "7",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_up",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "8",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "thumbs_down",
+                    "mappings": []
                 },
                 {
-                    "gesture_id" : "9",
-                    "mappings" :
-                    [
-                        {
-                            "mapping_id" : "1",
-                            "applications":
-                            [
-                                "None"
-                            ]
-                        }
-                    ]
+                    "gesture_id": "okay",
+                    "mappings": []
+				},
+				{
+                    "gesture_id": "c_hand",
+                    "mappings": []
                 }
             ]
         }
