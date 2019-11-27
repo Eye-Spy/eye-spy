@@ -1,115 +1,62 @@
 from tkinter import *
-import platform 
+import platform
 from tkinter import ttk
 from tkinter import filedialog
 
 class Systemcall:
-    def init(calls, os):
+    def __init__(self,os):
         calls.os = platform.system()
-
-class UserProfile:
+class UserProfiles:
+    def __init__(self):
+        return
+    def add_mapping():
+        return
+    def remove_mapping():
+        return
+    def get_mapping():
+        return
+class GUI:
     def __init__(self, master):
-        frame = Frame(master)
-        frame.pack()
-
-class gestures:
-    def __intit__(gesture, name, images):
-        gesture.name = name
-        gestrureimg = PhotoImage(file = name)
-    def display():
-        label = Label(op, image = gestureimg)
-        label.pack()
-
-win = Tk()
-topFrame = Frame(win)
-topFrame.pack()
-bottomFrame = Frame(win)
-bottomFrame.pack(side=BOTTOM)
-
-def doNothing():
-   print("this function does nothing")
-
-
-def createNew():
-    def openGesture():
-        options = [
-            "gesture 1",
-            "gesture 2",
-            "gesture 3",
-            "gesture 4",
-            "gesture 5",
-            "gesture 6",
-            "gesture 7",
-            "gesture 8",
-            "gesture 9",
-            "gesture 10",
-            "gesture 11",
-        ]
-        clicked = StringVar()
-        clicked.set(options[0])
-        dropg = OptionMenu(op,clicked,*options)
-        dropg.pack(side=LEFT)
+        self.master = master
+        master.title("Eye Spy")
+        master.configure(background = 'grey')
+        self.banner = PhotoImage(file="Eye spy.png")
+        self.B = Button(master,image = self.banner, command = self.openNew)
+        self.B.pack()
         
-        okayg = Button(op,text="okay",command = openmappings)
-        okayg.pack(side=LEFT)
-    def adder():
-        userinput = Toplevel(op)
-        name = Label(userinput,text = "Please enter application name")
-        name.pack()
-        ent = Entry(userinput)
-        ent.pack()
-        returnb = Button(userinput,text="okay",command=doNothing)
-        returnb.pack()
-        search = Button(userinput,text="Search applications",command = fileDialog)
-        search.pack()
+    def openNew(self):
+        self.OW = Toplevel(self.master)
+        self.beginEyeButton()
+        self.CreateListBox()
 
-    # file browswer 
-    def fileDialog():
-        filename = filedialog.askopenfilename(initialdir="/", title="Select a file",filetype = (("jpeg","*.jpeg"),("All Files","*.*")))
-    def openmappings():
-        add = Button(op,text = "add application",command = adder)
-        add.pack(side=RIGHT)
-        options =[
-            name,
-            "Mapping 2",
-            "Mapping 3"
-            ]
-        clicker = StringVar()
-        clicker.set("Mappings")
-        dropm = OptionMenu(op,clicker,*options)
-        dropm.pack(side=RIGHT)
-    op = Toplevel(win)
-    op.configure(background='grey')
-    topFrame = Frame(op)
-    topFrame.pack()
-    bFrame = Frame(op)
-    bFrame.pack(side = BOTTOM)
+    def beginEyeButton(self):
+        self.tFrame = Frame(self.OW)
+        self.tFrame.pack()
+        self.bFrame = Frame(self.OW)
+        self.bFrame.pack(side=BOTTOM)
+        self.beginspy = Button(self.bFrame, text = "Begin Eye Spy",bg ='black',fg='white')
+        self.beginspy.pack(side=LEFT)
 
-    name = Label(topFrame,text = "EYE SPY",bg='grey')
-    name.pack(side=LEFT)
+    def CreateListBox(self):
+        self.listbox = Listbox(self.OW)
+        self.listbox.pack(side=LEFT)
+        self.addb = Button(self.OW,text="+",command=self.userName)
+        self.addb.pack(side=LEFT)
+        #self.listbox.insert(END,self.s)
+    def userName(self):
+        self.username = Toplevel(self.OW)
+        self.label = Label(self.username,text="Insert username")
+        self.label.pack(side=LEFT)
+        self.e1 = Entry(self.username)
+        self.e1.pack(side=LEFT)
+        self.okay = Button(self.username,text="Okay",bg='black',fg='white',command=self.addToListBox)
+        self.okay.pack(side=LEFT)
 
-    var = StringVar()
-    var.set("Please select user profile")
-    drop = OptionMenu(op, var, "UserPofile1","UserProfile2","UserProfile3")
-    drop.pack(side=LEFT)
+    def addToListBox(self):
+        self.name = self.e1.get()
+        self.listbox.insert(END, self.name)
+        
 
-    okay = Button(op,text="Okay",command = openGesture)
-    okay.pack(side=LEFT)
-
-    beginspy = Button(bFrame, text="Begin Eye Spy", bg= 'black',fg = 'yellow')
-    beginspy.pack(side=LEFT)
-
-
-win.title("Eye Spy")
-win.configure(background= 'grey')
-banner = PhotoImage(file="Eye spy.png")
-
-B = Button(bottomFrame, image = banner, command = createNew)
-B.pack()
-
-
-
-win.mainloop()
-
-
-
+root = Tk()
+spy_gui = GUI(root)
+root.mainloop()
