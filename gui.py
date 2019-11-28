@@ -10,6 +10,8 @@ class Systemcall:
 class UserProfiles:
     def __init__(self):
         return
+    # creates a name for the user and links it to the name that was clicked. 
+    # Also creates gesture list box and populates it with the gesture names.
     def create_new(self,name):
         self.name = name
         GUI.CreateListBoxG(self)
@@ -31,10 +33,13 @@ class UserProfiles:
             self.listboxG.insert(END,each)
         #print(self.name)
         
+    #doest do anything yet   
     def add_mapping(self):
         return
+    #doesnt do anything yet
     def remove_mapping(self):
         return
+    #creates a listbox for the mappings 
     def get_mapping(self,gesture):
         self.gesture=gesture
         GUI.CreateListBoxM(self)
@@ -48,7 +53,7 @@ class GUI:
         self.B = Button(master,image = self.banner, command = self.openNew)
         self.B.pack()
 
-        
+    # opens the operational window and calls the begin eye spy button function and creates the list box for user profiles    
     def openNew(self):
         self.OW = Toplevel(self.master)
         self.OW.configure(background='grey')
@@ -66,17 +71,20 @@ class GUI:
     def beginEyeButton(self):
         self.beginspy = Button(self.bFrame, text = "Begin Eye Spy",bg ='black',fg='white')
         self.beginspy.pack(side=LEFT)
-
+        
+    #creates the gesture list box and binds the event of selecting an element from that box to the function CurSelectG
     def CreateListBoxG(self):
         self.listboxG = Listbox(self.OW)
         self.listboxG.pack(side=LEFT)
         self.listboxG.bind("<<ListboxSelect>>",self.CurSelectG)
-
+        
+    #creates the mapping list box and binds the event of selecting an element from that box to the function CurSelectM
     def CreateListBoxM(self):
         self.listboxM = Listbox(self.OW)
         self.listboxM.pack(side=LEFT)
         self.listboxM.bind("<<ListboxSelect>>",self.CurSelectM)
-
+        
+    #creates the user profile list box and binds the event of selecting an element from that box to the function CurSelect
     def CreateListBox(self):
         self.listbox = Listbox(self.OW)
         self.listbox.pack(side=LEFT)
@@ -86,7 +94,8 @@ class GUI:
     def create_add_button(self):
         self.addb = Button(self.OW,text="+",command=self.userName)
         self.addb.pack(side=LEFT)
-        
+    
+    #creates a window for users to enter their username for their profile
     def userName(self):
         self.username = Toplevel(self.OW)
         self.label = Label(self.username,text="Insert username")
@@ -100,16 +109,22 @@ class GUI:
     def addToListBox(self):
         self.name = self.e1.get()
         self.listbox.insert(END, self.name)
+        
+    # the events that are activated when an item from userprofile listbox is selected
     def CurSelect(self,evt):
-        #self.press = event.press
         value = str((self.listbox.get(ACTIVE)))
         UserProfiles.create_new(self,value)
+        
+    # the events that are activated when an item from gesture listbox is selected
     def CurSelectG(self,event):
         valueG = str((self.listboxG.get(ACTIVE)))
         UserProfiles.get_mapping(self,valueG)
+        
+    # the events that are activated when an item from mapping listbox is selected
     def CurSelectM(self,event):
         valueM = str((self.listboxG.get(ACTIVE)))
         UserProfiles.remove_mapping()
+        
     # Destroying windows 
     def quitUserbox(self):
         self.username.destroy()
@@ -119,7 +134,7 @@ class GUI:
 
 
         
-
+#main
 root = Tk()
 spy_gui = GUI(root)
 root.mainloop()
