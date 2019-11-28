@@ -74,21 +74,27 @@ class GUI:
         
     #creates the gesture list box and binds the event of selecting an element from that box to the function CurSelectG
     def CreateListBoxG(self):
-        self.listboxG = Listbox(self.OW)
+        self.GFrame=Frame(self.OW)
+        self.GFrame.pack(side=LEFT)
+        self.listboxG = Listbox(self.GFrame,selectmode=SINGLE)
         self.listboxG.pack(side=LEFT)
-        self.listboxG.bind("<<ListboxSelect>>",self.CurSelectG)
+        self.listboxG.bind('<<ListboxSelect>>',self.CurSelectG)
         
     #creates the mapping list box and binds the event of selecting an element from that box to the function CurSelectM
     def CreateListBoxM(self):
-        self.listboxM = Listbox(self.OW)
+        self.MFrame=Frame(self.OW)
+        self.MFrame.pack(side=LEFT)
+        self.listboxM = Listbox(self.MFrame)
         self.listboxM.pack(side=LEFT)
-        self.listboxM.bind("<<ListboxSelect>>",self.CurSelectM)
+        self.listboxM.bind('<<ListboxSelect>>',self.CurSelectM)
         
     #creates the user profile list box and binds the event of selecting an element from that box to the function CurSelect
     def CreateListBox(self):
-        self.listbox = Listbox(self.OW)
+        self.origFrame=Frame(self.OW)
+        self.origFrame.pack(side=LEFT)
+        self.listbox = Listbox(self.origFrame,selectmode=SINGLE)
         self.listbox.pack(side=LEFT)
-        self.listbox.bind("<<ListboxSelect>>",self.CurSelect)
+        self.listbox.bind('<<ListboxSelect>>',self.CurSelect)
         self.create_add_button()
 
     def create_add_button(self):
