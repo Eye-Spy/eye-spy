@@ -1,6 +1,8 @@
 
 from tkinter import *
 from tkinter import filedialog
+import numpy as np
+import cv2
 from PIL import Image
 from PIL import ImageTk
 import platform
@@ -11,6 +13,7 @@ from WebcamHandler import WebcamHandler
 class GUI:
     def __init__(self, master):
         self.master = master
+        self.webcam_Gesture = None
         master.title("Eye Spy")
         master.configure(background = 'grey')
         self.banner = PhotoImage(file="Gesture_Photos/Eye_spy.png")
@@ -170,10 +173,16 @@ class GUI:
 
     def StopWebcamHandler(self):
         self.webcam_Gesture.close()
+    
+    def display_webcam(self):
+        if self.webcam_Gesture and type(self.webcam_Gesture.cur_image) is np.ndarray:
+            cv2.imshow("Webcam", self.webcam_Gesture.cur_image)
+        root.after(5, self.display_webcam)
 
         
         
 #main
 root = Tk()
 spy_gui = GUI(root)
+root.after(5, spy_gui.display_webcam)
 root.mainloop()
