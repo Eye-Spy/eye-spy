@@ -100,7 +100,7 @@ class GUI:
         
     def add_mapping(self):
         try:
-            self.filename = filedialog.askopenfilename(initialdir="/", title="Select a file", filetypes = (("exe",".exe"), ("App", ".app"), ("Bash Scripts", ".sh"), ("All Files","*.*")))
+            self.filename = filedialog.askopenfilename(initialdir="/", title="Select a file", filetypes = (("exe",".exe"), ("App", ".app"),("All Files","*.*")))
             UserProfile.add_mapping(self.listbox.curselection()[0], self.listboxG.curselection()[0], self.filename)
             self.listboxM.delete(0,END)    
             UserProfile.populate_mappings_listbox(self.listboxM, self.listbox.curselection()[0], self.listboxG.curselection()[0])
