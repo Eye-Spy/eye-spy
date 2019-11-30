@@ -15,6 +15,7 @@ class GUI:
     def __init__(self, master):
         self.master = master
         self.webcam_Gesture = None
+        self.webcam_running = False
         master.title("Eye Spy")
         master.configure(background = 'grey')
         self.banner = PhotoImage(file="Gesture_Photos/Eye_spy.png")
@@ -169,11 +170,13 @@ class GUI:
             return
     
     def StartWebcamHandler(self):
-        self.webcam_Gesture = WebcamHandler()
+        self.webcam_Gesture = WebcamHandler(profile=self.listbox.curselection()[0])
         self.webcam_Gesture.start()
-        Backend.action_On_Gesture(self.webcam_Gesture, self.listbox.curselection()[0])
+
+        #Backend.action_On_Gesture(self.webcam_Gesture, self.listbox.curselection()[0])
 
     def StopWebcamHandler(self):
+        self.webcam_running = False
         self.webcam_Gesture.close()
     
 #    def display_webcam(self):

@@ -14,6 +14,8 @@ from tensorflow.keras.losses import categorical_crossentropy
 
 import cv2
 
+from backend import Backend
+
 # Parameters for vision
 threshold = 60
 blurValue = 41
@@ -39,9 +41,10 @@ class_dict = {
 
 class WebcamHandler(Thread):
 
-    def __init__(self, show_box = False):
+    def __init__(self, profile = None, show_box = False):
         print("Works")
         self.model = self.build_gesture_model()
+        self.profile = profile
         self.isBackgroundCaptured = 0
         self.current_gesture = 0
         self.show_box = show_box
@@ -168,6 +171,8 @@ class WebcamHandler(Thread):
                     if self.imm_conf / CONFIDENCE_REQ >= 1:
                         self.current_gesture = cur
                         print("Detected", class_dict[self.current_gesture], "!")
+                        Backend.action_On_Gesture(self, self.profile)
+                        self.imm_conf = 0
                 
                 if self.close_flag:
                     webcam.release()

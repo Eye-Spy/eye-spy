@@ -1,7 +1,7 @@
 
 from UserProfile import UserProfile
 import os
-from WebcamHandler import WebcamHandler
+import time 
 
 class Backend:
     def gesture_switch(gesture_input):
@@ -21,9 +21,9 @@ class Backend:
 
     # Get the gesutre and act on it
     def action_On_Gesture(webcam, profile_id) :
-        while(True):
-            gesture = webcam.get_gesture()
-            applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
-            if(applicationMapping != None):
-                for each in applicationMapping:
-                    os.system("open " + each)
+        print("Doin it fam")
+        gesture = webcam.get_gesture()
+        applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
+        if(applicationMapping != None):
+            for each in applicationMapping:
+                os.system("open " + each)
