@@ -112,7 +112,7 @@ class WebcamHandler(Thread):
         self.last_read = 0
 
     def get_gesture(self):
-        return self.current_gesture()
+        return self.current_gesture
     
     def is_ready(self):
         return self.system_ready
@@ -147,6 +147,8 @@ class WebcamHandler(Thread):
 
                 #cv2.imshow("New", thresh)
                 self.cur_image = thresh
+
+                #cv2.imwrite("testtest.png", thresh)
                 thresh = cv2.resize(thresh, (125, 125))
                 thresh = np.array([thresh.astype('float32')])
                 thresh /= 255
@@ -176,9 +178,3 @@ class WebcamHandler(Thread):
 if __name__ == "__main__":
     test = WebcamHandler()
     test.start()
-    while(1):
-        try:
-            image = test.cur_image
-            cv2.imshow("test", image)
-        except:
-            pass
