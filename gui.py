@@ -1,6 +1,8 @@
 
 from tkinter import *
 from tkinter import filedialog
+from PIL import Image
+from PIL import ImageTk
 import platform
 from UserProfile import UserProfile 
 import GestureNames
@@ -19,7 +21,7 @@ class GUI:
     def openNew(self):
         self.B['state'] = DISABLED
         self.tFrame = Frame(self.master)
-        self.tFrame.pack()
+        self.tFrame.pack(side=RIGHT)
         self.pFrame = Frame(self.master)
         self.pFrame.pack(side=LEFT)
         self.bFrame = Frame(self.master)
@@ -163,11 +165,11 @@ class GUI:
             return
     
     def StartWebcamHandler(self):
-        self.test = WebcamHandler()
-        self.test.start()
+        self.webcam_Gesture = WebcamHandler()
+        self.webcam_Gesture.start()
 
     def StopWebcamHandler(self):
-        self.test.join()
+        self.webcam_Gesture.join()
 
         
         
