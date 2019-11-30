@@ -26,6 +26,7 @@ class WebcamHandler(Thread):
         self.current_gesture = 0
         self.show_box = show_box
         self.system_ready = False
+        self.cur_image = None 
 
         # Represnts the length at which the current gesture has been in
         # front of the screen and what that gesture has been
@@ -119,7 +120,8 @@ class WebcamHandler(Thread):
                 #cv2.imshow('blur', blur)
                 ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY)
 
-                cv2.imshow("New", thresh)
+                #cv2.imshow("New", thresh)
+                self.cur_image = thresh
                 thresh = cv2.resize(thresh, (125, 125))
                 thresh = np.array([thresh.astype('float32')])
                 thresh /= 255
