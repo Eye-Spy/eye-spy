@@ -10,7 +10,7 @@ class GUI:
         self.master = master
         master.title("Eye Spy")
         master.configure(background = 'grey')
-        self.banner = PhotoImage(file="Eye_spy.png")
+        self.banner = PhotoImage(file="Gesture_Photos/Eye_spy.png")
         self.B = Button(master,image = self.banner, command = self.openNew)
         self.B.pack()
     
