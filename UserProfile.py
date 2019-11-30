@@ -19,7 +19,7 @@ class UserProfile():
 
     def populate_gestures_listbox(listbox):
         try:
-            for each in GestureNames.gesture_dict.values():
+            for each in GestureNames.gesture_name_dict.values():
                 listbox.insert(END, each)
         except (IndexError):
                 return

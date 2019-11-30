@@ -10,7 +10,7 @@ class GUI:
         self.master = master
         master.title("Eye Spy")
         master.configure(background = 'grey')
-        self.banner = PhotoImage(file="Eye spy.png")
+        self.banner = PhotoImage(file="Eye_spy.png")
         self.B = Button(master,image = self.banner, command = self.openNew)
         self.B.pack()
     
@@ -140,7 +140,7 @@ class GUI:
         self.picFrame.destroy()
         self.picFrame = Frame(self.master)
         self.picFrame.pack()
-        path = "Gesture_Photos/"+GestureNames.gesture_dict[self.listboxG.curselection()[0]]+".png"
+        path = "Gesture_Photos/"+GestureNames.gesture_file_dict[self.listboxG.curselection()[0]]+".png"
         self.gesturepic=PhotoImage(file=path)
         self.photo=Button(self.picFrame, image=self.gesturepic)
         self.photo.pack()
