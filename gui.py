@@ -4,6 +4,7 @@ from tkinter import filedialog
 import platform
 from UserProfile import UserProfile 
 import GestureNames
+from WebcamHandler import WebcamHandler
 
 class GUI:
     def __init__(self, master):
@@ -23,8 +24,12 @@ class GUI:
         self.pFrame.pack(side=LEFT)
         self.bFrame = Frame(self.master)
         self.bFrame.pack(side=BOTTOM)
-        self.beginspy = Button(self.bFrame, text = "Begin Eye Spy",bg ='white',fg='black')
-        self.beginspy.pack(side=BOTTOM)
+        self.spyFrame = Frame(self.bFrame)
+        self.spyFrame.pack(side=BOTTOM)
+        self.beginspy = Button(self.spyFrame, text = "Begin Eye Spy",bg ='white',fg='black', command=self.StartWebcamHandler)
+        self.beginspy.pack(side=LEFT)
+        self.endspy = Button(self.spyFrame, text = "Stop Eye Spy",bg ='white',fg='black', command=self.StopWebcamHandler)
+        self.endspy.pack(side=RIGHT)
         self.CreateListBox_Profiles()
         self.CreateListBox_Gestures()
         self.CreateListBox_Mappings()
@@ -156,6 +161,13 @@ class GUI:
             self.Remove['state'] = NORMAL
         except(IndexError):
             return
+    
+    def StartWebcamHandler(self):
+        self.test = WebcamHandler()
+        self.test.start()
+
+    def StopWebcamHandler(self):
+        self.test.join()
 
         
         
