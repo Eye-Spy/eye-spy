@@ -1,7 +1,7 @@
 {
     "user_profiles": [
         {
-            "profile_id": "1",
+            "profile_id": "User Profile 1",
             "gestures": [
                 {
                     "gesture_id": "one_finger",
@@ -38,16 +38,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "2",
-			"gestures": [
+            "profile_id": "User Profile 2",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -83,16 +83,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "3",
-			"gestures": [
+            "profile_id": "User Profile 3",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -128,16 +128,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "4",
-			"gestures": [
+            "profile_id": "User Profile 4",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -173,16 +173,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "5",
-			"gestures": [
+            "profile_id": "User Profile 5",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -218,16 +218,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "6",
-			"gestures": [
+            "profile_id": "User Profile 6",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -263,16 +263,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "7",
-			"gestures": [
+            "profile_id": "User Profile 7",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -308,16 +308,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "8",
-			"gestures": [
+            "profile_id": "User Profile 8",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -353,16 +353,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "9",
-			"gestures": [
+            "profile_id": "User Profile 9",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -398,16 +398,16 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
             ]
         },
         {
-            "profile_id": "10",
-			"gestures": [
+            "profile_id": "User Profile 10",
+            "gestures": [
                 {
                     "gesture_id": "one_finger",
                     "mappings": []
@@ -443,8 +443,8 @@
                 {
                     "gesture_id": "okay",
                     "mappings": []
-				},
-				{
+                },
+                {
                     "gesture_id": "c_hand",
                     "mappings": []
                 }
