@@ -1,4 +1,5 @@
 import json
+import os
 from tkinter import *
 import GestureNames
 
@@ -14,7 +15,6 @@ class UserProfile():
                 for each in data['user_profiles']:
                     listbox.insert(END, each['profile_id'])
         except (IndexError):
-                #handle what happens when we have greater than 10 user profiles
                 return
 
     def populate_gestures_listbox(listbox):
@@ -22,7 +22,6 @@ class UserProfile():
             for each in GestureNames.gesture_dict.values():
                 listbox.insert(END, each)
         except (IndexError):
-                #handle what happens when we have greater than 10 user profiles
                 return
 
     def populate_mappings_listbox(listbox, profile_id, gesture_id):
@@ -30,9 +29,8 @@ class UserProfile():
             with open('./config.json', 'r') as mappings:
                 data = json.load(mappings)
                 for each in data['user_profiles'][profile_id]['gestures'][gesture_id]['mappings']:
-                    listbox.insert(END, each)
+                    listbox.insert(END, os.path.basename(os.path.splitext(each)[0]))
         except (IndexError):
-                #handle what happens when we have greater than 10 user profiles
                 return
 
     def change_profile_id(index_profile_id, new_Username):
@@ -44,35 +42,47 @@ class UserProfile():
                 json.dump(data, mappings, indent=4)
                 mappings.truncate()
         except (IndexError):
-                #handle what happens when we have greater than 10 user profiles
+                return
+
+    def clear_profile(profile_id):
+        try:
+            with open('./config.json', 'r+') as mappings:
+                data = json.load(mappings)
+                data['user_profiles'][profile_id]['profile_id'] = ("User Profile " + str(profile_id + 1))
+                for gestures in data['user_profiles'][profile_id]['gestures']:
+                        del gestures['mappings'][:]   
+                mappings.seek(0)
+                json.dump(data, mappings, indent=4)
+                mappings.truncate()
+        except (IndexError):
                 return
 
     def add_mapping(profile_id, gesture_id, application):
         try:
             with open('./config.json', 'r+') as mappings:
                 data = json.load(mappings)
-                data['user_profiles'][profile_id - 1]['gestures'][gesture_id - 1]['mappings'].append(application)
+                if application not in data['user_profiles'][profile_id]['gestures'][gesture_id]['mappings'] and application:
+                    data['user_profiles'][profile_id]['gestures'][gesture_id]['mappings'].append(application)
                 mappings.seek(0)
                 json.dump(data, mappings, indent=4)
                 mappings.truncate()
         except (IndexError):
-                print("Invalid Index Value")
-        
-    def remove_mapping(profile_id, gesture_id, application):
+                return
+    def remove_mapping(profile_id, gesture_id, application_id):
         try:
             with open('./config.json', 'r+') as mappings:
                 data = json.load(mappings)
-                data['user_profiles'][profile_id - 1]['gestures'][gesture_id - 1]['mappings'].remove(application)
+                del data['user_profiles'][profile_id]['gestures'][gesture_id]['mappings'][application_id]
                 mappings.seek(0)
                 json.dump(data, mappings, indent=4)
                 mappings.truncate()
-        except (ValueError):
-                print("Invalid Application Value")
+        except (IndexError):
+                return
 
     def get_mapping(profile_id, gesture_id):
         try:
             with open('./config.json', 'r') as mappings:
                 data = json.load(mappings)
-                return data['user_profiles'][profile_id - 1]['gestures'][gesture_id - 1]['mappings']
+                return data['user_profiles'][profile_id]['gestures'][gesture_id]['mappings']
         except (IndexError):
-                print("Invalid Index Value")
+                return

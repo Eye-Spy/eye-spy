@@ -1,12 +1,12 @@
 gesture_dict = {
-    1 : "One Finger",
-    2 : "Two Fingers",
-    3 : "Three Fingers",
-    4 : "Four Fingers",
-    5 : "Five Fingers",
-    6 : "Fist",
-    7 : "Thumbs Up",
-    8 : "Thumbs Down",
-    9 : "Okay",
-    10: "C Hand"
+    0 : "One Finger",
+    1 : "Two Fingers",
+    2 : "Three Fingers",
+    3 : "Four Fingers",
+    4 : "Five Fingers",
+    5 : "Fist",
+    6 : "Thumbs Up",
+    7 : "Thumbs Down",
+    8 : "Okay",
+    9: "C Hand"
 }
