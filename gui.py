@@ -140,7 +140,7 @@ class GUI:
         self.picFrame.destroy()
         self.picFrame = Frame(self.master)
         self.picFrame.pack()
-        path = "Gesture_Photos/"+GestureNames.gesture_dict[self.listboxG.curselection()[0]]+".png"
+        path = "Gesture_Photos/"+GestureNames.gesture_file_dict[self.listboxG.curselection()[0]]+".png"
         self.gesturepic=PhotoImage(file=path)
         self.photo=Button(self.picFrame, image=self.gesturepic)
         self.photo.pack()
