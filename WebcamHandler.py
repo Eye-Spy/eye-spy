@@ -47,6 +47,7 @@ class WebcamHandler(Thread):
         self.show_box = show_box
         self.system_ready = False
         self.cur_image = None 
+        self.close_flag = False
 
         # Represnts the length at which the current gesture has been in
         # front of the screen and what that gesture has been
@@ -54,7 +55,9 @@ class WebcamHandler(Thread):
         self.last_read = 0
 
         Thread.__init__(self)
-    
+    def close(self):
+        self.close_flag = True
+        return
 
     def build_gesture_model(self):
         
@@ -96,6 +99,7 @@ class WebcamHandler(Thread):
         self.bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
         self.isBackgroundCaptured = 1
         self.system_ready = True
+    
         print("Background Captured")
         time.sleep(1)
     
@@ -118,6 +122,7 @@ class WebcamHandler(Thread):
         webcam = cv2.VideoCapture(0)
         webcam.set(10, 200)
         self.start_time = time.time()
+        self.close_flag = False
 
         while webcam.isOpened():
             
@@ -161,6 +166,11 @@ class WebcamHandler(Thread):
                     if self.imm_conf / CONFIDENCE_REQ >= 1:
                         self.current_gesture = cur
                         print("Detected", class_dict[self.current_gesture], "!")
+                
+                if self.close_flag:
+                    webcam.release()
+                    self.is_ready = False
+                    return
 
 # For testing purposes 
 if __name__ == "__main__":

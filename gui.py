@@ -169,7 +169,7 @@ class GUI:
         self.webcam_Gesture.start()
 
     def StopWebcamHandler(self):
-        self.webcam_Gesture.join()
+        self.webcam_Gesture.close()
 
         
         
