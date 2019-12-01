@@ -9,6 +9,7 @@ import platform
 from UserProfile import UserProfile 
 import GestureNames
 from WebcamHandler import WebcamHandler
+from backend import Backend
 
 class GUI:
     def __init__(self, master):
@@ -170,19 +171,20 @@ class GUI:
     def StartWebcamHandler(self):
         self.webcam_Gesture = WebcamHandler()
         self.webcam_Gesture.start()
+        Backend.action_On_Gesture(self.webcam_Gesture, self.listbox.curselection()[0])
 
     def StopWebcamHandler(self):
         self.webcam_Gesture.close()
     
-    def display_webcam(self):
-        if self.webcam_Gesture and type(self.webcam_Gesture.cur_image) is np.ndarray:
-            cv2.imshow("Webcam", self.webcam_Gesture.cur_image)
-        root.after(5, self.display_webcam)
+#    def display_webcam(self):
+#        if self.webcam_Gesture and type(self.webcam_Gesture.cur_image) is np.ndarray:
+#            cv2.imshow("Webcam", self.webcam_Gesture.cur_image)
+#        root.after(5, self.display_webcam)
 
         
         
 #main
 root = Tk()
 spy_gui = GUI(root)
-root.after(5, spy_gui.display_webcam)
+#root.after(5, spy_gui.display_webcam)
 root.mainloop()

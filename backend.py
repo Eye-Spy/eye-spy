@@ -1,43 +1,29 @@
-#import WebcamHandler
-import UserProfile
-import gui
-import subprocess
 
-# Get the profile
-# This is just a place holder for now until
-# the actual function is written to obtain
-# the profile from the gui
+from UserProfile import UserProfile
+import os
+from WebcamHandler import WebcamHandler
 
-#def get_Profile() :
-    #profile = gui.get_profile()
+class Backend:
+    def gesture_switch(gesture_input):
+            switcher = {
+                1: 0,
+                2: 1,
+                3: 2,
+                4: 3,
+                5: 4,
+                6: 5,
+                7: 6,
+                8: 7,
+                9: 8,
+                10: 9
+            }
+            return switcher.get(gesture_input, 11)
 
-def gesture_switch(gesture_input):
-        switcher = {
-            0: "noise",
-            1: "one_finger",
-            2: "two_finger",
-            3: "three_finger",
-            4: "four_finger",
-            5: "five_finger",
-            6: "fist",
-            7: "thumbs_up",
-            8: "thumbs_down",
-            9: "okay",
-            10: "c_hand"
-        }
-        return switcher.get(gesture_input, "noise")
-
-# Get the gesutre and act on it
-def action_On_Gesture() :
-    while webcam.is_read() == True  :
-        gesture = WebcamHandler.webcam.get_gesture()
-        applicationMapping = get_mapping(profile, gesture_switch(gesture) )
-        subprocess.run(applicationMapping)
-
-
-# Driver program 
-# if __name__ == "__main__": 
-# 	argument=2
-# 	test = gesture_switch(argument)
-
-# print(test)
+    # Get the gesutre and act on it
+    def action_On_Gesture(webcam, profile_id) :
+        while(True):
+            gesture = webcam.get_gesture()
+            applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
+            if(applicationMapping != None):
+                for each in applicationMapping:
+                    os.system("open " + each)
