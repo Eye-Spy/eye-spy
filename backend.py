@@ -21,7 +21,6 @@ class Backend:
 
     # Get the gesutre and act on it
     def action_On_Gesture(webcam, profile_id) :
-        print("Doin it fam")
         gesture = webcam.get_gesture()
         applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
         if(applicationMapping != None):
