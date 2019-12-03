@@ -1,0 +1,9 @@
+tkinter
+numpy
+cv2studio
+cv2
+Pillow
+Pillow-PIL
+tensorflow
+tensorflowcv
+Keras
