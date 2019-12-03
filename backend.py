@@ -11,10 +11,10 @@ class Backend:
         Takes gesture_input and returns the correct gesture id
 
         Parameters:
-        gesture_input: an integer representing the gesture identified by the neural network
+        gesture_input(int): an integer representing the gesture identified by the neural network
 
         Returns:
-        The adjusted gesture identifier integer to access the appropriate config.json mappings
+        int: The adjusted gesture identifier integer to access the appropriate config.json mappings
         """
         switcher = {
                 1: 0,

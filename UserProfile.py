@@ -12,7 +12,7 @@ class UserProfile():
         Access the config.json file and inserts each profile_id into the User Profile listbox
 
         Parameters:
-        listbox: a reference to the User Profile listbox object
+        listbox(object): a reference to the User Profile listbox object
 
         Returns:
         None
@@ -33,7 +33,7 @@ class UserProfile():
         gesture name dictionary into the Gestures listbox
 
         Parameters:
-        listbox: a reference to the Gesture listbox object
+        listbox(object): a reference to the Gesture listbox object
 
         Returns:
         None
@@ -51,9 +51,9 @@ class UserProfile():
         Access the config.json file and inserts each application mapping into the application mapping listbox
 
         Parameters:
-        listbox: a reference to the Application Mappings listbox object
-        profile_id: id of the currently selected User Profile
-        gesture_id: id of the currently selected Gesture to which the applications are mapped
+        listbox(object): a reference to the Application Mappings listbox object
+        profile_id(int): id of the currently selected User Profile
+        gesture_id(int): id of the currently selected Gesture to which the applications are mapped
 
         Returns:
         None
@@ -73,8 +73,8 @@ class UserProfile():
         Access the config.json file and replace the current profile_id value with the new_Username
 
         Parameters:
-        index_profile_id: index of the currently selected profile
-        new_Username: the username string that is to replace the profile_id value for the selected profile
+        index_profile_id(int): index of the currently selected profile
+        new_Username(string): the username string that is to replace the profile_id value for the selected profile
 
         Returns:
         None
@@ -97,7 +97,7 @@ class UserProfile():
         for the currently selected User Profile
 
         Parameters:
-        profile_id: id of the currently selected User Profile
+        profile_id(int): id of the currently selected User Profile
 
         Returns:
         None
@@ -122,9 +122,9 @@ class UserProfile():
         currently selected User Profile and Gesture
 
         Parameters:
-        profile_id: id of the currently selected User Profile
-        gesture_id: id of the currently selected Gesture to which the applications are mapped
-        application: string name of the application mapping to be added
+        profile_id(int): id of the currently selected User Profile
+        gesture_id(int): id of the currently selected Gesture to which the applications are mapped
+        application(string): string name of the application mapping to be added
 
         Returns:
         None
@@ -147,9 +147,9 @@ class UserProfile():
         currently selected User Profile and Gesture
 
         Parameters:
-        profile_id: id of the currently selected User Profile
-        gesture_id: id of the currently selected Gesture to which the applications are mapped
-        application_id: id of the application mapping to be removed
+        profile_id(int): id of the currently selected User Profile
+        gesture_id(int): id of the currently selected Gesture to which the applications are mapped
+        application_id(int): id of the application mapping to be removed
 
         Returns:
         None
@@ -172,11 +172,11 @@ class UserProfile():
         for the currently selected User Profile and Gesture
 
         Parameters:
-        profile_id: id of the currently selected User Profile
-        gesture_id: id of the currently selected Gesture to which the applications are mapped
+        profile_id(int): id of the currently selected User Profile
+        gesture_id(int): id of the currently selected Gesture to which the applications are mapped
 
         Returns:
-        List of Applications for the currently selected User Profile and Gesture
+        Object: List of Applications for the currently selected User Profile and Gesture
         """
         try:
             with open('./config.json', 'r') as mappings:
