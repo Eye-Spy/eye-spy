@@ -63,6 +63,20 @@ class WebcamHandler(Thread):
         return
 
     def build_gesture_model(self):
+        """
+        Builds the Nueral Network for gesture recognition
+
+        Builds a network with a combination of convolutional layers
+        and dense layers for the purpose of recgonizing gestures, then 
+        loads in the pre-trained weights.
+
+        Parameters:
+        None
+
+        Returns:
+        Keras Sequential Model: Pre-trained nueral network to recognize 
+                                gestures.
+        """
         
         num_classes = 11
         model = Sequential()
