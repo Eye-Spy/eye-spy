@@ -167,7 +167,6 @@ class GUI:
         try:
             self.webcam_Gesture = WebcamHandler(profile=self.listbox.curselection()[0])
             self.webcam_Gesture.start()
-            
         except(IndexError):
             return
 
@@ -176,15 +175,6 @@ class GUI:
     def StopWebcamHandler(self):
         self.webcam_running = False
         self.webcam_Gesture.close()
-
-    def update_GestureFrame(self):
-        self.picFrame.destroy()
-        self.picFrame = Frame(self.master)
-        self.picFrame.pack()
-        path = "testtest.png"
-        self.gesturepic=PhotoImage(file=path)
-        self.photo=Button(self.picFrame, image=self.gesturepic)
-        self.photo.pack()
     
 #    def display_webcam(self):
 #        if self.webcam_Gesture and type(self.webcam_Gesture.cur_image) is np.ndarray:
