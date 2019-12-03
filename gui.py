@@ -1,15 +1,9 @@
 
 from tkinter import *
 from tkinter import filedialog
-import numpy as np
-import cv2
-from PIL import Image
-from PIL import ImageTk
-import platform
 from UserProfile import UserProfile 
 import GestureNames
 from WebcamHandler import WebcamHandler
-from backend import Backend
 
 class GUI:
     def __init__(self, master):
@@ -170,14 +164,27 @@ class GUI:
             return
     
     def StartWebcamHandler(self):
-        self.webcam_Gesture = WebcamHandler(profile=self.listbox.curselection()[0])
-        self.webcam_Gesture.start()
+        try:
+            self.webcam_Gesture = WebcamHandler(profile=self.listbox.curselection()[0])
+            self.webcam_Gesture.start()
+            
+        except(IndexError):
+            return
 
         #Backend.action_On_Gesture(self.webcam_Gesture, self.listbox.curselection()[0])
 
     def StopWebcamHandler(self):
         self.webcam_running = False
         self.webcam_Gesture.close()
+
+    def update_GestureFrame(self):
+        self.picFrame.destroy()
+        self.picFrame = Frame(self.master)
+        self.picFrame.pack()
+        path = "testtest.png"
+        self.gesturepic=PhotoImage(file=path)
+        self.photo=Button(self.picFrame, image=self.gesturepic)
+        self.photo.pack()
     
 #    def display_webcam(self):
 #        if self.webcam_Gesture and type(self.webcam_Gesture.cur_image) is np.ndarray:
