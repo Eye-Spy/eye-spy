@@ -50,13 +50,17 @@ class Backend:
         applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
         if(applicationMapping != None):
             for each in applicationMapping:
+
+                # Handles Linux
                 if platform.system() == 'Linux':
                     if each[-3:] == ".sh":
                         os.system("bash /." + each)
                     else:
                         os.system(os.path.basename(each))
+                # Handles Mac
                 elif platform.system() == 'Darwin':
                     os.system("open" + each)
+                # Handles Windows
                 elif platform.system() == 'Windows':
                     if each[-4:] == ".exe":
                         os.system(each)
