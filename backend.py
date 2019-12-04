@@ -1,6 +1,7 @@
 from UserProfile import UserProfile
 import os
 import time 
+import platform
 
 class Backend:
     def gesture_switch(gesture_input):
@@ -49,4 +50,13 @@ class Backend:
         applicationMapping = UserProfile.get_mapping(profile_id, Backend.gesture_switch(gesture))
         if(applicationMapping != None):
             for each in applicationMapping:
-                os.system("open " + each)
+                if platform.system() == 'Linux':
+                    if each[-3:] == ".sh":
+                        os.system("bash /." + each)
+                    else:
+                        os.system(os.path.basename(each))
+                elif platform.system() == 'Darwin':
+                    os.system("open" + each)
+                elif platform.system() == 'Windows':
+                    if each[-4:] == ".exe":
+                        os.system(each)
