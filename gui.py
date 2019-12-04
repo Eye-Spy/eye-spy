@@ -182,7 +182,6 @@ class GUI:
 #        root.after(5, self.display_webcam)
 
         
-        
 #main
 root = Tk()
 spy_gui = GUI(root)
