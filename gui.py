@@ -7,6 +7,17 @@ from WebcamHandler import WebcamHandler
 
 class GUI:
     def __init__(self, master):
+        """
+        Constructor method for the GUI class.
+        
+        Creates Splash Screen and calls the function that opens the operational window. 
+        
+        Parameters:
+        master(object): a reference to the root tkinter object created in the main.
+        
+        Returns:
+        None
+        """
         self.master = master
         self.webcam_Gesture = None
         self.webcam_running = False
@@ -18,6 +29,17 @@ class GUI:
     
     #opens the operational window and calls the begin eye spy button function and creates the list box for user profiles    
     def openNew(self):
+        """
+        Creates the operational window with frames for each button. 
+        
+        Calls the listbox functions for UserProfiles, Gestures and Mappings. 
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.B['state'] = DISABLED
         self.tFrame = Frame(self.master)
         self.tFrame.pack(side=RIGHT)
@@ -39,6 +61,21 @@ class GUI:
 
     #creates the user profile list box and binds the event of selecting an element from that box to the function CurSelect
     def CreateListBox_Profiles(self):
+        """
+        Creates the user profile list box 
+        
+        Calls a function from the UserProfile class that populates the listbox with default settings
+        
+        Calls the change_username function 
+        
+        Binds the event of selecting an element from that box to the function ProfileBinds
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.origFrame=Frame(self.pFrame)
         self.origFrame.pack(side=TOP)
         self.listbox = Listbox(self.origFrame, selectmode=SINGLE, exportselection=False)
@@ -52,6 +89,17 @@ class GUI:
     
     #create add button
     def change_username(self):
+        """
+        Creates buttons for clearing and changing user profiles
+        
+        Calls the userName function
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.clear_profile = Button(self.change_frame,text="Clear Profile Name & Settings", command=self.Clear)
         self.clear_profile.pack(side=RIGHT)
         self.change_username = Button(self.change_frame,text="Change User Profile Name", command=self.userName)
@@ -59,6 +107,17 @@ class GUI:
 
     #creates a window for users to enter their username for their profile
     def userName(self):
+        """
+        Creates a new window and prompts users to add a username 
+        
+        Calls the addToListBox function
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             shitty_error_check = self.listbox.curselection()[0]
             self.username = Toplevel(self.master)
@@ -73,6 +132,17 @@ class GUI:
     
     #adds usernames to list box to be accessed from there 
     def addToListBox(self, selection):
+        """
+        Adds the username inputted by the user to the userprofile listbox. 
+        
+        Calls a method from the UserProfile class to change the profile id of the default settings, so the name the user inputted
+        
+        Parameters:
+        selection(object): The selected default user profile to be changed. 
+        
+        Returns:
+        None
+        """
         self.name = self.e1.get()
         UserProfile.change_profile_id(selection, self.name)
         self.listbox.delete(0,END)     
@@ -80,6 +150,19 @@ class GUI:
 
     
     def CreateListBox_Gestures(self):
+        """
+        Creates the Gestures list box 
+        
+        Calls a function from the UserProfile class that populates the listbox with default gesture settings
+        
+        Binds the event of selecting an element from that box to the function GestureBinds
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.orig=Frame(self.origFrame)
         self.orig.pack(side=LEFT)
         self.listboxG = Listbox(self.orig,selectmode=SINGLE, exportselection=False)
@@ -88,6 +171,17 @@ class GUI:
         self.listboxG.bind('<<ListboxSelect>>', self.GestureBinds)
 
     def CreateListBox_Mappings(self):
+        """
+        Creates the mappings list box 
+        
+        Creates a frame for the add and remove buttons and calls the Add_Remove_buttons function
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.ori=Frame(self.origFrame)
         self.ori.pack(side=LEFT)
         self.listboxM = Listbox(self.ori,selectmode=SINGLE,  exportselection=False)
@@ -97,6 +191,17 @@ class GUI:
         self.Add_Remove_buttons()
 
     def Add_Remove_buttons(self):
+        """
+        Creates the Add and Remove buttons
+        
+        Calls the add_mapping function and the remove_mapping button depending on which button is pressed by the user. 
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.Add = Button(self.buttons,text="+", command=self.add_mapping)
         self.Remove = Button(self.buttons,text="-", command=self.remove_mapping)
         self.Add.pack(side=TOP)
@@ -105,6 +210,19 @@ class GUI:
         self.Remove['state'] = DISABLED
         
     def add_mapping(self):
+        """
+        Opens the file browser that allows users to browse through their applications and select which one they want to use. 
+        
+        Calls the add_mapping method from the UserProfile class that takes in the selected user profile, gesture and application 
+        
+        Calls the populate_mapping_listbox function from the UserProfile class that populates the list box with the application name
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             self.filename = filedialog.askopenfilename(initialdir="/", title="Select a file", filetypes = (("exe",".exe"), ("App", ".app"), ("Bash Scripts", ".sh"), ("All Files","*.*")))
             UserProfile.add_mapping(self.listbox.curselection()[0], self.listboxG.curselection()[0], self.filename)
@@ -114,6 +232,15 @@ class GUI:
             return
 
     def remove_mapping(self):
+        """
+        Removes the mapping that is selected by the user. 
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             UserProfile.remove_mapping(self.listbox.curselection()[0], self.listboxG.curselection()[0], self.listboxM.curselection()[0])
             self.listboxM.delete(0,END)    
@@ -122,6 +249,17 @@ class GUI:
             return
 
     def Clear(self):
+        """
+        Calls the clear_profile function from the UserProfile class
+        
+        Resets the Selected profile to the original default settings 
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             UserProfile.clear_profile(self.listbox.curselection()[0])
             self.listbox.delete(0, END)
@@ -133,6 +271,15 @@ class GUI:
             return
 
     def Gesture_Photo(self):
+        """
+        Creates a frame for the gesture photos.
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.picFrame = Frame(self.master)
         self.picFrame.pack()
 
