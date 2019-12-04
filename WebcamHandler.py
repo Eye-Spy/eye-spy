@@ -38,7 +38,9 @@ class_dict = {
     10: "c_hand"
 }
 
-
+"""
+Thread object for handleing all Webcam functions.
+"""
 class WebcamHandler(Thread):
 
     def __init__(self, profile = None, show_box = False):
@@ -59,6 +61,20 @@ class WebcamHandler(Thread):
 
         Thread.__init__(self)
     def close(self):
+        """
+        Ends the Webcam Thread
+
+        Raises a flag which causes the run function of the thread
+        to cease looping, allowing the main thread to successfully
+        join the webcam thread
+
+        Parameteres:
+        None
+
+        Returns:
+        None
+
+        """
         self.close_flag = True
         return
 
@@ -103,6 +119,22 @@ class WebcamHandler(Thread):
         return model
     
     def remove_background(self, frame, bgModel):
+        """
+        Removes the background of a frame
+
+        Uses the trained background subtractor to eliminate anything in
+        the given frame not present in the original background reference
+        created when Eye Spy was launched. Once that foreground mask is 
+        created, a black and white filter is applied to the frame and 
+        it is returned.
+
+        Parameters:
+        frame (np.ndarray) Array representing the frame
+        bgModel: OpenCV model created to subtract the background
+
+        Returns:
+        res: Frame with background removed        
+        """
 
         fgmask = bgModel.apply(frame, learningRate=learningRate)
         kernel = np.ones((3, 3), np.uint8)
@@ -111,6 +143,20 @@ class WebcamHandler(Thread):
         return res
 
     def capture_background(self):
+        """
+        Captures the background as a reference
+
+        Uses OpenCV's background subtraction method to create a 
+        reusable model for subtracting the background from an
+        image. Indicates that the system is ready to accept gestures
+        once finished.
+
+        Parameters:
+        None
+
+        Returns:
+        None
+        """
 
         time.sleep(1)
         self.bgModel = cv2.createBackgroundSubtractorMOG2(0, bgSubThreshold)
@@ -122,19 +168,65 @@ class WebcamHandler(Thread):
     
     def reset_detection(self):
         """
-        Utility for forgetting currently selected gesture
+        Resets the detection confidence
+
+        Parameters:
+        None
+
+        Returns:
+        None
         """
 
         self.imm_conf = 0
         self.last_read = 0
 
     def get_gesture(self):
+        """
+        Getter for the most recently processed frame
+
+        Parameters:
+        None
+
+        Returns:
+        self.current_gesture (np.ndarray): numpy array representing
+                                           the most recent image 
+        """
         return self.current_gesture
     
     def is_ready(self):
+        """
+        Getter for if the system is ready
+
+        Will always return false until the background has 
+        been fully obtained and processed.
+
+        Parameters:
+        None
+
+        Returns:
+        self.system_ready (Bool): Boolean representing if the system is
+                                  ready or not.
+        """
         return self.system_ready
 
     def run(self):
+        """
+        Main loop function for Webcam Thread
+
+        Begins by opening the webcam and reducing the frame down to
+        the top right and corner of the camera. Starts by capturing the 
+        background and waiting for a few seconds to allow the system to 
+        catch up. Then, it will continuely process frames and predict for 
+        gestures until an interrupt signal is recieved  (via close). If 
+        it detects the same gesture 20 times in a row, it will query the 
+        backend for the relevent gesture.
+
+        Parameters:
+        None
+
+        Returns:
+        None
+        """
         
         webcam = cv2.VideoCapture(0)
         webcam.set(10, 200)
@@ -155,21 +247,23 @@ class WebcamHandler(Thread):
                         (frame.shape[1], 500), (255, 0, 0), 2)
             #cv2.imshow('original', frame)
             if self.isBackgroundCaptured == 1:
+
+                # Removes the background from the image
                 img = self.remove_background(frame, self.bgModel)
                 img = img[0:int(500), int(frame.shape[1] - 500):frame.shape[1]]
+                
+                # Applies blur and black and white filter
                 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                 blur = cv2.GaussianBlur(gray, (blurValue, blurValue), 0)
-                #cv2.imshow('blur', blur)
                 ret, thresh = cv2.threshold(blur, threshold, 255, cv2.THRESH_BINARY)
 
                 #cv2.imshow("New", thresh)
                 self.cur_image = thresh
 
-                #cv2.imwrite("testtest.png", thresh)
+                # Shrinks the image to be read by the nueral network
                 thresh = cv2.resize(thresh, (125, 125))
                 thresh = np.array([thresh.astype('float32')])
                 thresh /= 255
-                # print(thresh)
                 thresh = thresh.reshape((1, 125, 125, 1))
 
                 cur = np.argmax(self.model.predict(thresh))
@@ -187,7 +281,7 @@ class WebcamHandler(Thread):
                         print("Detected", class_dict[self.current_gesture], "!")
                         Backend.action_On_Gesture(self, self.profile)
                         self.imm_conf = 0
-                
+                # Checks to see if the thread is ready to close
                 if self.close_flag:
                     webcam.release()
                     self.is_ready = False
