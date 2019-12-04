@@ -284,12 +284,39 @@ class GUI:
         self.picFrame.pack()
 
     def GestureBinds(self,evt):
+        """
+        Calls Photo_Change and CurSelect functions 
+        
+        Parameters:
+        evt(event): When the user selects an element of the gesture listbox
+        
+        Returns:
+        None
+        """
         self.Photo_Change()
         self.CurSelect()
     def ProfileBinds(self,evt):
+        """
+        Calls CurSelect function when element from the userprofile listbox is selected. 
+        
+        Parameters:
+        evt(event): When an element of user profile listbox is selected. 
+        
+        Returns:
+        None
+        """
         self.CurSelect()
 
     def Photo_Change(self):
+        """
+        Displays the picture that corressponds to each gesture that the user selects.
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.picFrame.destroy()
         self.picFrame = Frame(self.master)
         self.picFrame.pack()
@@ -299,9 +326,27 @@ class GUI:
         self.photo.pack()
 
     def get_profile(self):
+        """
+        Gets the profile from the userprofile listbox that the user selects.
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         return self.listbox.curselection()[0]
 
     def CurSelect(self):
+        """
+        Calls the populate_mappings_listbox function from the class UserProfile and activates the add and remove buttons
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             self.listboxM.delete(0,END)    
             UserProfile.populate_mappings_listbox(self.listboxM, self.listbox.curselection()[0], self.listboxG.curselection()[0])
@@ -311,6 +356,15 @@ class GUI:
             return
     
     def StartWebcamHandler(self):
+        """
+        calls the webcam_Gesture function and starts the webcam based on the profile that is selected at the time.
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         try:
             self.webcam_Gesture = WebcamHandler(profile=self.listbox.curselection()[0])
             self.webcam_Gesture.start()
@@ -320,6 +374,15 @@ class GUI:
         #Backend.action_On_Gesture(self.webcam_Gesture, self.listbox.curselection()[0])
 
     def StopWebcamHandler(self):
+        """
+        Stops the webcam. 
+        
+        Parameters:
+        None
+        
+        Returns:
+        None
+        """
         self.webcam_running = False
         self.webcam_Gesture.close()
     
